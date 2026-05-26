@@ -1,0 +1,265 @@
+/* 기본 초기화 및 폰트 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+body {
+    background-color: #F9F9F7; /* 부드러운 아이보리 바탕 */
+    color: #333333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #5B8FB9; /* 포인트 컬러: 소프트 블루 */
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #5B8FB9;
+}
+
+/* 히어로 섹션 */
+.hero {
+    background: linear-gradient(135deg, #E8F1F5 0%, #F9F9F7 100%); /* 베이비블루 -> 아이보리 그라데이션 */
+    padding-top: 160px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8CAABF;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero h1 strong {
+    font-weight: 700;
+    color: #5B8FB9;
+}
+
+.hero-desc {
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #5B8FB9;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #467599;
+    transform: translateY(-2px);
+}
+
+/* 핵심 역량 섹션 (About) */
+.about h2, .projects h2, .contact h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    color: #333;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.about-card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid #EEF1F6;
+}
+
+.about-card h3 {
+    color: #5B8FB9;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* 프로젝트 섹션 */
+.projects {
+    background-color: #F2F6F8; /* 아주 연한 스카이 톤 배경 분리 */
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-item {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(91, 143, 185, 0.05);
+    border: 1px solid #E3EDF2;
+}
+
+.category {
+    font-size: 0.85rem;
+    color: #8CAABF;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.project-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: #5B8FB9;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* 컨택 폼 섹션 (DB 연동 준비) */
+.contact-sub {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.02);
+    border: 1px solid #EEF1F6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    background-color: #F9FAFB;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #5B8FB9;
+    background-color: #fff;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.05rem;
+}
+
+/* 푸터 */
+footer {
+    background-color: #333A40;
+    color: #DFE4EA;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* 반응형 모바일 최적화 */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .header-flex { flex-direction: column; gap: 15px; }
+    .project-item { padding: 25px; }
+}
